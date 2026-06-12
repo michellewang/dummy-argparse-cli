@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  test:
+  create-descriptor:
 
     runs-on: ubuntu-latest
 
