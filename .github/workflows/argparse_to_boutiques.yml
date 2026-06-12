@@ -21,8 +21,8 @@ jobs:
         pip install -U pip
         pip install .
 
-    - name: Upload coverage to Codecov
-      uses: ./github/actions/argparse-to-boutiques
+    - name: Create descriptor
+      uses: michellewang/argparse-to-boutiques@v0
       with:
         parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
