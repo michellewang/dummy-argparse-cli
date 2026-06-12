@@ -14,9 +14,11 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v6
+    - name: Checkout repository
+      uses: actions/checkout@v6
 
-    - uses: actions/setup-python@v6
+    - name: Set up Python
+      uses: actions/setup-python@v6
 
     - name: Install package
       run: |
@@ -24,10 +26,8 @@ jobs:
         pip install .
 
     - name: Create descriptor
-      uses: michellewang/argparse-to-boutiques@e58f14c2485b610f055d12c5f3d9ddace76e8bff
+      uses: michellewang/argparse-to-boutiques@255984976f7590185118cb2088905bedd74c9c3a
       with:
-        location: my_tool.cli
-        parser: get_parser
-        # parser-location: my_tool.cli:get_parser
+        parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
         token: ${{ secrets.PAT }}
