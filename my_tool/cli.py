@@ -9,6 +9,7 @@ def get_parser():
     parser.add_argument(
         "--bye", action="store_true", help="Whether to say goodbye instead of hello."
     )
+    parser.add_argument("--flag")
     return parser
 
 
