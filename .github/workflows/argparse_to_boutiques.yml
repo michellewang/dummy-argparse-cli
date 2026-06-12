@@ -22,7 +22,7 @@ jobs:
         pip install .
 
     - name: Upload coverage to Codecov
-      uses: michellewang/argparse-to-boutiques
+      uses: ./github/actions/argparse-to-boutiques
       with:
         parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
