@@ -1,0 +1,13 @@
+[project]
+name = "dummy-argparse-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[tool.uv]
+package = true
+
+[project.scripts]
+dummy-cli = "my_tool.cli:main"
