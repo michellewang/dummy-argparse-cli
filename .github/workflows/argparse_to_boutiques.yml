@@ -22,7 +22,7 @@ jobs:
         pip install .
 
     - name: Create descriptor
-      uses: michellewang/argparse-to-boutiques@v0
+      uses: michellewang/argparse-to-boutiques@b0febae0cc19d64d120a7884275f9e650f574453
       with:
         parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
