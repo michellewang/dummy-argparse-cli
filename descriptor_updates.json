@@ -1,0 +1,6 @@
+{
+    "tool-version": "1.2.3",
+    "container-image.image": "my-container-image:latest",
+    "container-image.index": "docker://",
+    "container-image.type": "docker"
+}

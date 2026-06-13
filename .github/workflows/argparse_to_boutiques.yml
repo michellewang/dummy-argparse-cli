@@ -26,9 +26,11 @@ jobs:
         pip install .
 
     - name: Create descriptor
-      uses: michellewang/argparse-to-boutiques@fa74a89ff5362e1a28beace3ac50bfbbf167c0da
+      uses: michellewang/argparse-to-boutiques@018d3828772361b939599554317f7e11dc5c5a8f
       with:
+        parser-type: argparse
         parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
+        updates-file: descriptor_updates.json
         token: ${{ secrets.PAT }}
         open-pr: false
