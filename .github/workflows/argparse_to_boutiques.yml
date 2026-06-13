@@ -33,4 +33,4 @@ jobs:
         output-path: my_tool/data/descriptor.json
         updates-file: descriptor_updates.json
         token: ${{ secrets.PAT }}
-        open-pr: false
+        open-pr: true
