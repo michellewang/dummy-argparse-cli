@@ -34,4 +34,5 @@ jobs:
         parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
         # token: ${{ secrets.PAT }}
-        open-pr: true
+        exclude-version: true
+        open-pr: false
