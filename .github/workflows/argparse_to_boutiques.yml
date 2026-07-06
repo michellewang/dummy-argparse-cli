@@ -33,4 +33,3 @@ jobs:
         output-path: my_tool/data/descriptor.json
         token: ${{ secrets.PAT }}
         open-pr: true
-        exclude-version: false
