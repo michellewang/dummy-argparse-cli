@@ -47,13 +47,16 @@ jobs:
         token: ${{ secrets.PAT }}
         exclude-version: true
         open-pr: true
+        click-prog-name: dummy-cli-click
 
     - name: Create descriptor for dummy-cli-click-group
       uses: michellewang/argparse-to-boutiques@98418399172001bf4935557f1a6a8d75300a2c82
       with:
         parser-type: click
-        parser-location: my_tool.cli_click_group:group
+        parser-location: my_tool.cli_click_group:greet
         output-path: my_tool/data/descriptor-dummy-cli-click-group.json
         token: ${{ secrets.PAT }}
         exclude-version: true
         open-pr: true
+        click-prog-name: dummy-cli-click-group
+        click-parent-location: my_tool.cli_click_group:group
