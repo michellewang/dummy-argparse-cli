@@ -9,6 +9,7 @@ def get_parser():
     parser.add_argument(
         "--bye", action="store_true", help="Whether to say goodbye instead of hello."
     )
+    parser.add_argument("--version", action="version", version="%(prog)s 1.0")
     return parser
 
 
