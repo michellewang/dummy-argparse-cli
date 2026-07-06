@@ -33,5 +33,5 @@ jobs:
         parser-type: argparse
         parser-location: my_tool.cli:get_parser
         output-path: my_tool/data/descriptor.json
-        token: ${{ secrets.PAT }}
+        # token: ${{ secrets.PAT }}
         open-pr: true
