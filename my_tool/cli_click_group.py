@@ -17,6 +17,11 @@ def group():
 
 
 @group.command()
+def version():
+    click.echo("dummy-cli-click-group 1.0")
+
+
+@group.command()
 @click.option("--name", default=DEFAULT_NAME, help="Input file")
 @click.option("--bye", is_flag=True, help="Whether to say goodbye instead of hello.")
 def greet(name, bye):
