@@ -4,10 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "click>=8.1.8",
+]
 
 [tool.uv]
 package = true
 
 [project.scripts]
 dummy-cli = "my_tool.cli:main"
+dummy-cli-click = "my_tool.cli_click:main"
+dummy-cli-click-group = "my_tool.cli_click_group:group"
