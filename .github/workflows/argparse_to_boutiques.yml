@@ -28,7 +28,7 @@ jobs:
         pip install .
 
     - name: Create descriptor for dummy-cli
-      uses: michellewang/argparse-to-boutiques@c0edd14ff097e03f6eb1f319bd4ae665a157612c
+      uses: michellewang/argparse-to-boutiques@add_tests
       with:
         parser-type: argparse
         parser-location: my_tool.cli:get_parser
@@ -40,7 +40,7 @@ jobs:
         # open-pr: true
 
     - name: Create descriptor for dummy-cli-click
-      uses: michellewang/argparse-to-boutiques@c0edd14ff097e03f6eb1f319bd4ae665a157612c
+      uses: michellewang/argparse-to-boutiques@add_tests
       with:
         parser-type: click
         parser-location: my_tool.cli_click:main
@@ -51,7 +51,7 @@ jobs:
         click-prog-name: dummy-cli-click
 
     - name: Create descriptor for dummy-cli-click-group
-      uses: michellewang/argparse-to-boutiques@c0edd14ff097e03f6eb1f319bd4ae665a157612c
+      uses: michellewang/argparse-to-boutiques@add_tests
       with:
         parser-type: click
         parser-location: my_tool.cli_click_group:group
@@ -62,7 +62,7 @@ jobs:
         click-prog-name: dummy-cli-click-group
 
     - name: Create descriptor for dummy-cli-click-group greet
-      uses: michellewang/argparse-to-boutiques@c0edd14ff097e03f6eb1f319bd4ae665a157612c
+      uses: michellewang/argparse-to-boutiques@add_tests
       with:
         parser-type: click
         parser-location: my_tool.cli_click_group:greet
