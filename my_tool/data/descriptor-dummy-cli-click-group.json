@@ -1,0 +1,56 @@
+{
+  "schema-version": "0.5+styx",
+  "name": "dummy-cli-click-group",
+  "command-line": "dummy-cli-click-group [COMMAND]",
+  "inputs": [
+    {
+      "id": "command",
+      "type": [
+        {
+          "name": "version",
+          "id": "version",
+          "command-line": "[VERSION]",
+          "inputs": [
+            {
+              "id": "version",
+              "type": "String",
+              "value-key": "[VERSION]",
+              "value-choices": [
+                "version"
+              ],
+              "name": "version"
+            }
+          ]
+        },
+        {
+          "command-line": "greet [NAME] [BYE]",
+          "inputs": [
+            {
+              "id": "name",
+              "type": "String",
+              "value-key": "[NAME]",
+              "description": "Input file (Default: \"world\")",
+              "optional": true,
+              "command-line-flag": "--name",
+              "name": "name"
+            },
+            {
+              "id": "bye",
+              "type": "Flag",
+              "value-key": "[BYE]",
+              "description": "Whether to say goodbye instead of hello.",
+              "optional": true,
+              "command-line-flag": "--bye",
+              "name": "bye"
+            }
+          ],
+          "name": "greet",
+          "id": "greet"
+        }
+      ],
+      "value-key": "[COMMAND]",
+      "description": "Available subcommands",
+      "name": "command"
+    }
+  ]
+}
