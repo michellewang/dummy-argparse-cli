@@ -1,0 +1,31 @@
+{
+  "schema-version": "0.5+styx",
+  "name": "dummy-cli",
+  "description": "This is a custom description set via updates-str",
+  "command-line": "dummy-cli [NAME] [BYE]",
+  "inputs": [
+    {
+      "id": "name",
+      "type": "String",
+      "value-key": "[NAME]",
+      "description": "Input file (Default: \"world\")",
+      "optional": true,
+      "command-line-flag": "--name",
+      "name": "name"
+    },
+    {
+      "id": "bye",
+      "type": "Flag",
+      "value-key": "[BYE]",
+      "description": "Whether to say goodbye instead of hello.",
+      "optional": true,
+      "command-line-flag": "--bye",
+      "name": "bye"
+    }
+  ],
+  "container-image": {
+    "image": "my-container-image:latest",
+    "index": "docker://",
+    "type": "docker"
+  }
+}
