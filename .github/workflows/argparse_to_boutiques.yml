@@ -28,7 +28,7 @@ jobs:
         pip install .
 
     - name: Create descriptor for dummy-cli
-      uses: michellewang/argparse-to-boutiques@add_tests
+      uses: styx-api/python-cli-to-boutiques@7/argdump_prog_name
       with:
         parser-type: argparse
         parser-location: my_tool.cli:get_parser
@@ -36,11 +36,12 @@ jobs:
         updates-file: descriptor_updates.json
         updates-str: '{"description": "This is a custom description set via updates-str"}'
         token: ${{ secrets.PAT }}
+        prog-name: dummy-cli
         # exclude-version: true
         # open-pr: true
 
     - name: Create descriptor for dummy-cli-click
-      uses: michellewang/argparse-to-boutiques@add_tests
+      uses: styx-api/python-cli-to-boutiques@7/argdump_prog_name
       with:
         parser-type: click
         parser-location: my_tool.cli_click:main
@@ -51,7 +52,7 @@ jobs:
         click-prog-name: dummy-cli-click
 
     - name: Create descriptor for dummy-cli-click-group
-      uses: michellewang/argparse-to-boutiques@add_tests
+      uses: styx-api/python-cli-to-boutiques@7/argdump_prog_name
       with:
         parser-type: click
         parser-location: my_tool.cli_click_group:group
@@ -59,10 +60,10 @@ jobs:
         token: ${{ secrets.PAT }}
         # exclude-version: true
         # open-pr: true
-        click-prog-name: dummy-cli-click-group
+        prog-name: dummy-cli-click-group
 
     - name: Create descriptor for dummy-cli-click-group greet
-      uses: michellewang/argparse-to-boutiques@add_tests
+      uses: styx-api/python-cli-to-boutiques@7/argdump_prog_name
       with:
         parser-type: click
         parser-location: my_tool.cli_click_group:greet
@@ -70,5 +71,6 @@ jobs:
         token: ${{ secrets.PAT }}
         # exclude-version: true
         # open-pr: true
-        click-prog-name: dummy-cli-click-group
+        prog-name: dummy-cli-click-group
+        click-prog-name: dummy-cli-click-group-BAD
         click-parent-location: my_tool.cli_click_group:group
